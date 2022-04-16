@@ -133,7 +133,7 @@ class RadialVisualizer(DataVisualizer):
 #        b = X.max(axis=0)
         size=X.shape[1]
         a=np.full((size), 0)
-        b=np.full((size), 0)
+        b=np.full((size), 1)
         return (X - a[np.newaxis, :]) / ((b - a)[np.newaxis, :])
 
     def fit(self, X, y=None, **kwargs):

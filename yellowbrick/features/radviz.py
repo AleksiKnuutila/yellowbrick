@@ -112,8 +112,6 @@ class RadialVisualizer(DataVisualizer):
         alpha=1.0,
         **kwargs
     ):
-        import pdb;pdb.set_trace()
-        12p[231=;
         if "target_type" not in kwargs:
             kwargs["target_type"] = "discrete"
         super(RadialVisualizer, self).__init__(
@@ -131,7 +129,6 @@ class RadialVisualizer(DataVisualizer):
         """
         MinMax normalization to fit a matrix in the space [0,1] by column.
         """
-        import pdb;pdb.set_trace()
         a = X.min(axis=0)
         b = X.max(axis=0)
         return (X - a[np.newaxis, :]) / ((b - a)[np.newaxis, :])

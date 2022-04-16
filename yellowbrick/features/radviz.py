@@ -129,6 +129,7 @@ class RadialVisualizer(DataVisualizer):
         """
         MinMax normalization to fit a matrix in the space [0,1] by column.
         """
+        import pdb;pdb.set_trace()
         a = X.min(axis=0)
         b = X.max(axis=0)
         return (X - a[np.newaxis, :]) / ((b - a)[np.newaxis, :])
